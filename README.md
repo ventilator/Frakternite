@@ -1,2 +1,2 @@
 # Frakternite
-![fractal tree] (/Pentigree/image.png) 
+![fractal tree](/Pentigree/image.png) 
