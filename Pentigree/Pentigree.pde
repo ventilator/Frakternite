@@ -11,7 +11,7 @@ PentigreeLSystem ps;
 void setup() {
   
   size(800, 800);
-  background(0);
+  background(13, 17, 23);
   ps = new PentigreeLSystem(90);
   PentigreeLSystem ps2 = new PentigreeLSystem(-90);
   ps.simulate(4);
