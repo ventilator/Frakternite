@@ -5,5 +5,5 @@ Mathematics is the language of nature. Everything around us can be represented a
 
 This repository is for playing around with such fractal generation.
 
-![fractal tree](/Fractal%20Tree/image.png) 
+![fractal tree](/Pentigree/image.png) 
 
