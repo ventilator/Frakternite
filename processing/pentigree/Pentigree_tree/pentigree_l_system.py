@@ -44,17 +44,17 @@ class PentigreeLSystem(LSystem):
         recursion_level = 1
         for i in range(self.steps):
             step = self.production[i]            
-            hue_ = recursion_level*20 # color to cycle through, for each push 
+            hue_ = recursion_level*15 # color to cycle through, for each push 
             if step == 'F':
                 noFill()
-                stroke(hue_,255,255,10)
+                stroke(hue_,255,255,50)
                 strokeWeight(10)
                 line(0, 0, 0, -self.drawLength*0.9**recursion_level)
                 translate(0, -self.drawLength*0.9**recursion_level)
             elif step == '+':
-                rotate(self.theta)
+                rotate(self.theta+radians(15))
             elif step == '-':
-                rotate(-self.theta)
+                rotate(-self.theta+radians(15))
             elif step == '[':
                 pushMatrix()
                 recursion_level += 1

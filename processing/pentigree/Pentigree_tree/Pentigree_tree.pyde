@@ -15,7 +15,7 @@ def setMaxPushes(pg, pushes):
 
 def setup():
     setMaxPushes(this.getGraphics(), PUSHES)
-    colorMode(HSB, 100);
+    colorMode(HSB, 100)
     size(1000, 500)
     global ps
     ps = PentigreeLSystem()
@@ -24,5 +24,10 @@ def setup():
     
 
 def draw():
-    background(100)
+    colorMode(RGB, 255) #discord
+    background(32,34,37) #discord
+    colorMode(HSB, 100) #discord
     ps.render()
+    
+def mousePressed():
+    save("line.png")   
