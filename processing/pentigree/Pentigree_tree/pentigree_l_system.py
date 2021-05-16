@@ -33,17 +33,19 @@ class PentigreeLSystem(LSystem):
     def getAge(self):
         return self.generations
 
-    def render(self):
+    def render(self):                
         translate(width / 4, height / 2)
         self.steps += 3
         if self.steps > len(self.production):
             self.steps = len(self.production)
 
+        recursion_level = 1
         for i in range(self.steps):
-            step = self.production[i]
+            step = self.production[i]            
+            hue_ = recursion_level*30 # color to cycle through, for each push 
             if step == 'F':
                 noFill()
-                stroke(255)
+                stroke(hue_,255,255)
                 line(0, 0, 0, -self.drawLength)
                 translate(0, -self.drawLength)
             elif step == '+':
@@ -52,5 +54,7 @@ class PentigreeLSystem(LSystem):
                 rotate(-self.theta)
             elif step == '[':
                 pushMatrix()
+                recursion_level += 1
             elif step == ']':
                 popMatrix()
+                recursion_level -= 1

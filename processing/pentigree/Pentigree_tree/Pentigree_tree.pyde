@@ -15,10 +15,11 @@ def setMaxPushes(pg, pushes):
 
 def setup():
     setMaxPushes(this.getGraphics(), PUSHES)
+    colorMode(HSB, 100);
     size(1000, 500)
     global ps
     ps = PentigreeLSystem()
-    ps.simulate(3)
+    ps.simulate(4)
     
     
 
