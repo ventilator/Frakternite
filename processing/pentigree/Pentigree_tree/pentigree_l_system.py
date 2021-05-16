@@ -7,10 +7,10 @@ class PentigreeLSystem(LSystem):
         self.steps = 0      
         self.somestep = 0.1
         self.xoff = 0.01
-        self.axiom = "F-F-F-F-F"
-        self.rule = "F-F++F+F-F-F"
+        self.axiom = "F"
+        self.rule = "F[-F][+F]"
         self.startLength = 60.0
-        self.theta = radians(72)
+        self.theta = radians(35)
         self.reset()
 
     def useRule(self, r_):
