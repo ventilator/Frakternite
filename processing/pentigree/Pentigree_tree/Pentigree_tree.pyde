@@ -24,5 +24,5 @@ def setup():
     
 
 def draw():
-    background(0)
+    background(100)
     ps.render()
