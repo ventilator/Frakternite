@@ -25,21 +25,16 @@ def angle(a, b):
 
 class Circles(Scene):
     def construct(self):
-        inner = Circle(radius=3)
-        outer = Circle(radius=4)
-
-        self.play(ShowCreation(inner))
-        self.wait(0.3)
-        self.play(ShowCreation(outer))
-        self.wait(0.3)
         LR = [LEFT, RIGHT]
         UD = [UP, DOWN]
         args = []
-
-        for i in range(50):
+        for i in range(80):
             args.append(random.uniform(0, 1) * random.choice(LR) + random.uniform(0, 1) * random.choice(UD))
-        for i in range(len(args)):
-            args[i] = random.uniform(3, 4) * args[i] / np.linalg.norm(args[i])
-
-        polygon = Polygon(*sort_vector(args))
-        self.play(ShowCreation(polygon))
+        for k in range(4):
+            inner = Circle(radius=k + 1)
+            self.play(ShowCreation(inner))
+            self.wait(0.3)
+            for i in range(len(args)):
+                args[i] = random.uniform(k, k + 1) * args[i] / np.linalg.norm(args[i])
+            polygon = Polygon(*sort_vector(args))
+            self.play(ShowCreation(polygon))
